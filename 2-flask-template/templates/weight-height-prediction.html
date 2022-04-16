@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weight Prediction | Anastasia Kinanti Putri</title>
+</head>
+
+<body class="bg-gray-100">
+    <!-- component -->
+    <!-- component -->
+    <div class="bg-gray-200 min-h-screen pt-2 font-mono my-16">
+        <div class="container flex mx-auto">
+            <div class="inputs w-full max-w-2xl p-6">
+                <h2 class="text-2xl text-gray-900">Klasifikasi Tinggi dan Berat Badan</h2>
+                <form class="mt-6 border-t border-gray-400 pt-4" method="POST" action="">
+                    <div class='flex flex-wrap -mx-3 mb-6'>
+                        <div class='w-full md:w-full px-3 mb-6'>
+                            <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+                                for='grid-text-1'>Tinggi Badan (Height)</label>
+                            <input type="text"
+                                class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                id='grid-text-1' type='text' placeholder='Masukkan tinggi badan (cm)'
+                                name="petal_length" required>
+                        </div>
+                        <div class='w-full md:w-full px-3 mb-6'>
+                            <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+                                for='grid-text-2'>Berat Badan (Weight)</label>
+                            <input type="text"
+                                class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                id='grid-text-2' type='text' placeholder='Masukkan berat badan (kg)' name="petal_width"
+                                required>
+                        </div>
+
+                    </div>
+                    <div class="flex justify-end ">
+                        <button
+                            class="appearance-none bg-gray-200 text-gray-900 px-2 py-1 shadow-sm border border-gray-400 rounded-md hover:bg-gray-300"
+                            type="submit">Prediksi</button>
+                    </div>
+            </div>
+            </form>
+
+            <div class="prediction-result w-full max-w-2xl p-6">
+                <h2 class="text-2xl text-gray-900">Hasil Klasifikasi Tinggi dan Berat Badan</h2>
+                <img class="my-3" src="static/img/weight-height.jpg" alt="berat tinggi">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>'
