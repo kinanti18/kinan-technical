@@ -13,12 +13,12 @@ def weight_prediction():
         print(dict(request.form))
         weight_features = dict(request.form).values()
         weight_features = np.array([float(x) for x in weight_features])
-        lin_reg, labelEncoder_gender = joblib.load("model-development/weight-classification-using-linear-regression.pkl")
-        weight_features = labelEncoder_gender.transform([weight_features])
+        #lin_reg, labelEncoder_gender = joblib.load("model-development/weight-classification-using-linear-regression.pkl")
+        lin_reg = joblib.load("model-development/weight-classification-using-linear-regression.pkl")
+        #weight_features = labelEncoder_gender.transform([weight_features])
         print(weight_features)
-        result = lin_reg.predict(weight_features)
-        result = result[0][75]
-        return render_template('weight-prediction.html', result=result)
+        result = lin_reg.predict([weight_features])
+        return render_template('weight-prediction.html', result=result[[0]])
     else:
         return "Unsupported Request Method"
 
